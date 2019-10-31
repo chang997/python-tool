@@ -38,7 +38,7 @@ class Admicro():
         self.driver.get(url_category)
         links = self.driver.find_elements_by_xpath('//ul[@class='other_post']/li/a').get_attribute("href") 
 
-        while i :
+        while True :
             try:
                 next_page = self.driver.find_elements_by_xpath('//ul[@class='paging-item'][7]').get_attribute("href") 
                 self.driver.get(next_page) 
